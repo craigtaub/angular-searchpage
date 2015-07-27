@@ -33,3 +33,10 @@ gem install compass
 cd app/css
 compass compile
 ```
+
+## TODO:
+ Add clean UI for Search and Results.
+ Add Real service.
+ Test submittal of form.
+ Setup task runner for tests and linter.
+ Ensure form is tied to the nav.

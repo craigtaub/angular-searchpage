@@ -20,13 +20,13 @@ describe('craigDoctifyApp controllers', function() {
     }));
 
     it('should create "stubs" model with items fetched from xhr', function() {
-          expect(scope.specialists.length).toBe(0);
-          $httpBackend.flush();
-          expect(scope.specialists[0].name).toBe('First specialist');
+        expect(scope.specialists.length).toBe(0);
+        $httpBackend.flush();
+        expect(scope.specialists[0].name).toBe('First specialist');
     });
 
     it('should set the default value of scoped property', function() {
-          expect(scope.scopedProperty).toBe('It is built with Angular.');
+        expect(scope.scopedProperty).toBe('It is built with Angular.');
     });
 
   });

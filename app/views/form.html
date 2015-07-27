@@ -1,51 +1,51 @@
 
-<div class="dropdown" ng-controller="SearchController">
-    <h1>Search Form</h1>
-    <form ng-submit="submit()" >
+<div ng-controller="SearchController">
 
-        <h2>By dropdown:</h2>
+    <div class="form">
 
-        <select class="btn btn-default" data-ng-options="item.name for item in insurers" data-ng-model="selectedInsurers"></select>
-        <select class="btn btn-default" data-ng-options="item.name for item in specialists" data-ng-model="selectedSpecialists"></select>
+        <h1>Search Form</h1>
 
-        <input type="submit" id="submit" class="btn btn-default" value="Search" />
+        <form ng-submit="submit()">
+            <h2>By dropdown:</h2>
+            <select class="btn btn-default" data-ng-options="item.name for item in insurers" data-ng-model="selectedInsurers"></select>
+            <select class="btn btn-default" data-ng-options="item.name for item in specialists" data-ng-model="selectedSpecialists"></select>
+            <input type="submit" id="submit" class="btn btn-default" value="Search" />
 
+            <h2>By text and filter:</h2>
+            <div class="specialists">
+                <label>Specialists: <input ng-model="specialistsText"></label>
+                <table>
+                    <tr><th>ID</th><th>Name</th></tr>
+                    <tr ng-repeat="item in specialists | filter:specialistsText">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="insurers">
+                <label>Insurers: <input ng-model="insurersText"></label>
+                <table>
+                    <tr><th>ID</th><th>Name</th></tr>
+                    <tr ng-repeat="item in insurers | filter:insurersText">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                      </tr>
+                </table>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="results">
+        <h2>Results</h2>
         <div class="options">
-            <p><b>Insurers Text:</b> {{insurersText}}</p>
             <p><b>Specialists Text:</b> {{specialistsText}}</p>
+            <p><b>Insurers Text:</b> {{insurersText}}</p>
         </div>
-
-        <h2>By text and filter:</h2>
-
-        <div class="specialists">
-            <label>Specialists: <input ng-model="specialistsText"></label>
-            <table>
-                <tr><th>Name</th><th>ID</th></tr>
-                <tr ng-repeat="item in specialists | filter:specialistsText">
-                    <td>{{item.id}}</td>
-                    <td>{{item.name}}</td>
-                </tr>
-
-            </table>
-            <div class="options">
-                <b>Specialists Text:</b> {{specialistsText}}
-            </div>
-        </div>
-
-        <div class="insurers">
-            <label>Insurers: <input ng-model="insurersText"></label>
-            <table>
-                <tr><th>Name</th><th>ID</th></tr>
-                <tr ng-repeat="item in insurers | filter:insurersText">
-                    <td>{{item.id}}</td>
-                    <td>{{item.name}}</td>
-                  </tr>
-            </table>
-            <div class="options">
-                <b>Insurers Text:</b> {{insurersText}}
-            </div>
-        </div>
-
-    </form>
+        <ul class="list-group" ng-repeat="item in results">
+            <li class="list-group-item">{{item.website}}</li>
+        </ul>
+    </div>
 
 </div>

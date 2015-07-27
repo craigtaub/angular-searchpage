@@ -16,6 +16,7 @@ angular.module('appControllers', [])
         if (this.selectedInsurers) {
             $scope.insurersText = this.selectedInsurers.name;
         }
+        $scope.results = Stub.query({dataType : 'results'});
     };
 
   }]);

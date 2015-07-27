@@ -16,7 +16,7 @@ body {
 }
 
 /* line 16, ../sass/app.scss */
-.welcome {
+.welcome, .results {
   padding-top: 10px;
   clear: both;
 }
