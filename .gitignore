@@ -1,7 +1,9 @@
-logs/*
-!.gitkeep
+
+# NPM
 node_modules/
 bower_components/
-tmp
+
 .DS_Store
-.idea
+
+# SASS
+app/css/.sass-cache

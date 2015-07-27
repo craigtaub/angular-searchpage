@@ -6,7 +6,7 @@ describe('craigDoctifyApp controllers', function() {
   beforeEach(module('craigDoctifyApp'));
   beforeEach(module('appServices'));
 
-  describe('SearchHome', function(){
+  describe('SearchController', function(){
     var scope, ctrl, $httpBackend;
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
@@ -15,7 +15,7 @@ describe('craigDoctifyApp controllers', function() {
           respond([{name: 'First Item'}]);
 
       scope = $rootScope.$new();
-      ctrl = $controller('SearchHome', {$scope: scope});
+      ctrl = $controller('SearchController', {$scope: scope});
     }));
 
     it('should create "stubs" model with 1 item fetched from xhr', function() {

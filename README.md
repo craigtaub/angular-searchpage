@@ -26,3 +26,9 @@ Run the tests:
 ```
 npm run protractor
 ```
+
+## SASS via compass
+```
+gem install compass
+compass compile
+```

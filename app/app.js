@@ -7,11 +7,11 @@ angular.module('craigDoctifyApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/view', {
-        templateUrl: 'views/view1.html',
-        controller: 'SearchHome'
+      when('/search', {
+        templateUrl: 'views/search.html',
+        controller: 'SearchController'
       }).
       otherwise({
-        redirectTo: '/view'
+        redirectTo: '/search'
       });
 }]);
