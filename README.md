@@ -35,8 +35,8 @@ compass compile
 ```
 
 ## TODO:
- Add clean UI for Search and Results.
- Add Real service.
- Test submittal of form.
- Setup task runner for tests and linter.
- Ensure form is tied to the nav.
+1. Add clean UI for Search and Results.
+2. Add Real service.
+3. Ensure form is tied to the nav.
+4. Test submittal of form.
+5. Setup task runner for tests and linter.
