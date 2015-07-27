@@ -1,8 +1,8 @@
 {
-  "name": "doctify-angular-search",
+  "name": "angular-searchpage",
   "description": "Doctify search page in AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/craig/angular-doctify",
+  "homepage": "https://github.com/craig/angular-searchpage",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
