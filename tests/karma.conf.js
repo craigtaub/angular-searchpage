@@ -5,14 +5,21 @@ module.exports = function(config){
 
     basePath : '../',
 
+    // 'app/*.js',
+    // 'app/**/*.js',
+
     files : [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-resource/angular-resource.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/app.js',
       'app/controllers/*.js',
-      'app/services/*.js'
+      'app/services/*.js',
+      'tests/unit/*.js'
     ],
+
+    exclude: ['tests/e2e/scenario.js'],
 
     autoWatch : true,
 
@@ -22,7 +29,6 @@ module.exports = function(config){
 
     plugins : [
             'karma-chrome-launcher',
-            'karma-firefox-launcher',
             'karma-jasmine',
             'karma-junit-reporter'
             ],
