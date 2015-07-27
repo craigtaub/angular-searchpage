@@ -30,5 +30,6 @@ npm run protractor
 ## SASS via compass
 ```
 gem install compass
+cd app/css
 compass compile
 ```

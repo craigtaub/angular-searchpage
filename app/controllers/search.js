@@ -6,16 +6,14 @@ angular.module('appControllers', [])
 
 .controller('SearchController', ['$scope', 'Stub',
   function($scope, Stub) {
-    $scope.prop = Stub.query();
-    $scope.scopedProperty = 'Welcome to View1';
+    $scope.specialists = Stub.query({dataType : 'specialists'});
+    $scope.insurers = Stub.query({dataType : 'insurers'});
 
-    $scope.list = ['tea'];
-    $scope.text = 'hello';
+    $scope.scopedProperty = 'It is built with Angular';
+
     $scope.submit = function() {
-      if ($scope.text) {
-        $scope.list.push(this.text);
-        $scope.text = '';
-      }
+        $scope.specialistsText = this.specialistsText;
+        $scope.insurersText = this.insurersText;
     };
-    
+
   }]);

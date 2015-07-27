@@ -1,10 +1,34 @@
-<div class="menu">
 
-    <form ng-submit="submit()" ng-controller="SearchController">
-        Enter text and hit enter:
-        <input type="text" ng-model="text" name="text" />
-        <input type="submit" id="submit" value="Submit" />
-        <pre>list={{list}}</pre>
+<div ng-controller="SearchController">
+    <h1>Search Form</h1>
+    <form ng-submit="submit()" >
+
+        <div class="specialists">
+            <label>Specialists: <input ng-model="specialistsText"></label>
+            <table>
+                <tr><th>Name</th><th>ID</th></tr>
+                <tr ng-repeat="item in specialists | filter:specialistsText">
+                    <td>{{item.id}}</td>
+                      <td>{{item.name}}</td>
+                </tr>
+            </table>
+            <b>Specialists Text: {{specialistsText}}</b>
+        </div>
+
+        <div class="insurers">
+            <label>Insurers: <input ng-model="insurersText"></label>
+            <table>
+                <tr><th>Name</th><th>ID</th></tr>
+                <tr ng-repeat="item in insurers | filter:insurersText">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                  </tr>
+            </table>
+            <b>Insurers Text: {{insurersText}}</b>
+        </div>
+
+        <input type="submit" id="submit" value="Search" />
+
     </form>
 
 </div>
