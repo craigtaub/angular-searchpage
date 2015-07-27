@@ -1,12 +1,17 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('craigDoctifyApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'appControllers',
+  'appServices'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.
+      when('/view', {
+        templateUrl: 'views/view1.html',
+        controller: 'SearchHome'
+      }).
+      otherwise({
+        redirectTo: '/view'
+      });
 }]);
