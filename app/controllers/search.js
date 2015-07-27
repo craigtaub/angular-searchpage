@@ -1,7 +1,5 @@
 'use strict';
 
-/* Controllers */
-
 angular.module('appControllers', [])
 
 .controller('SearchController', ['$scope', 'Stub',
@@ -12,8 +10,12 @@ angular.module('appControllers', [])
     $scope.scopedProperty = 'It is built with Angular';
 
     $scope.submit = function() {
-        $scope.specialistsText = this.specialistsText;
-        $scope.insurersText = this.insurersText;
+        if (this.selectedSpecialists) {
+            $scope.specialistsText = this.selectedSpecialists.name;
+        }
+        if (this.selectedInsurers) {
+            $scope.insurersText = this.selectedInsurers.name;
+        }
     };
 
   }]);

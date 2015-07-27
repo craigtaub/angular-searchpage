@@ -9,3 +9,14 @@ body {
   float: left;
   padding-right: 10px;
 }
+
+/* line 12, ../sass/app.scss */
+.options {
+  padding-top: 10px;
+}
+
+/* line 16, ../sass/app.scss */
+.welcome {
+  padding-top: 10px;
+  clear: both;
+}
