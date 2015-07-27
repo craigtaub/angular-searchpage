@@ -7,7 +7,7 @@ angular.module('appControllers', [])
     $scope.specialists = Stub.query({dataType : 'specialists'});
     $scope.insurers = Stub.query({dataType : 'insurers'});
 
-    $scope.scopedProperty = 'It is built with Angular';
+    $scope.scopedProperty = 'It is built with Angular.';
 
     $scope.submit = function() {
         if (this.selectedSpecialists) {

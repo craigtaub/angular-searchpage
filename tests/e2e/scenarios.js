@@ -19,7 +19,7 @@ describe('The app', function() {
 
     it('should render view1 when user navigates to /search', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+        toMatch(/Welcome to the search page/);
     });
 
   });
